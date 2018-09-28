@@ -72,7 +72,7 @@ For videos:
 **note**: regarding the frames in which the left and right lane weren't similar, i neglected the measurements and used the previous `best_fit` on that frame
 
 
-![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/tree/master/Write_up%20files/Write_up files/LanesInWarped_roadImg.jpg)
+![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/Write_up%20files/LanesInWarped_roadImg.jpg)
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
