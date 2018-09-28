@@ -33,7 +33,7 @@ regarding camera calibration, i used a well known shape (chessboard) to calibrat
 
 |<center>original image</center> |<center> undistorted image</center>|
 --------------- |------------------
-![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/camera_cal/calibration2.jpg)|![alt text][https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/Write_up%20files/undistortion_calibrationImg.jpg)
+![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/Write_up%20files/undistortion_calibrationImg.jpg)|![alt text][https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/Write_up%20files/undistortion_calibrationImg.jpg)
 
 ### Pipeline (single images)
 
@@ -55,7 +55,7 @@ The code for my perspective transform exists in the `findLanes` function -line 3
 
 Here is a sample of a warped image for the same image from above
 
-![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/tree/master/Write_up%20files/Write_up%20files/warped_roadImg.jpg)
+![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/Write_up%20files/warped_roadImg.jpg)
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
