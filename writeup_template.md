@@ -33,21 +33,21 @@ regarding camera calibration, i used a well known shape (chessboard) to calibrat
 
 |<center>original image</center> |<center> undistorted image</center>|
 --------------- |------------------
-![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/tree/master/Write_up%20files/Write_up%20files/calibration2.jpg)|![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/tree/master/Write_up%20files/Write_up%20files/undistortion_calibrationImg.jpg)
+![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/camera_cal/calibration2.jpg)|![alt text][https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/Write_up%20files/undistortion_calibrationImg.jpg)
 
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
 Now that i've got the camera and undistortion matrices, i can use them on every image or frame to get the undistorted image.i used the `undistortImg` function which is in the helper function to undistort the image. Here is an example image after undistorting it
-![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/tree/master/Write_up%20files/Write_up%20files/undistorted_roadImg.jpg)
+![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/Write_up%20files/undistorted_roadImg.jpg)
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 I used a combination of color and gradient thresholds to generate a binary image. I used HLS color space to get the color and gradient images and i combined them later to get the final binary image. for the color image, i converted the image to HLS and extracted the `s` layer and applied a threshold to it. for the gradient image,  converted the image to HLS and extracted the `l` layer and then, i used sobelx on that image and used a threshold to get only the lanes. This step can be found in the `findLanes` function
 
 Here's an image with the final result
-![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/tree/master/Write_up%20files/Write_up%20files/binary_roadImg.jp)
+![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/Write_up%20files/binary_roadImg.jpg)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -88,7 +88,7 @@ I implemented this step in lines 100 to the end of the `findLanes` function.
 
 Here is an image of the result.
 
-![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/tree/master/Write_up%20files/Write_up%20files/result_roadImg.jpg)
+![alt text](https://github.com/Mahmoud-Selim/CarND-Advanced-Lane-Lines/blob/master/Write_up%20files/result_roadImg.jpg)
 
 ---
 
