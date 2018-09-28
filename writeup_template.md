@@ -33,21 +33,21 @@ regarding camera calibration, i used a well known shape (chessboard) to calibrat
 
 |<center>original image</center> |<center> undistorted image</center>|
 --------------- |------------------
-![calibration2.jpg](attachment:calibration2.jpg)|![undistortion_calibrationImg.jpg](attachment:undistortion_calibrationImg.jpg)
+![alt text](Write_up files/calibration2.jpg)|![alt text](Write_up files/undistortion_calibrationImg.jpg)
 
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
 Now that i've got the camera and undistortion matrices, i can use them on every image or frame to get the undistorted image.i used the `undistortImg` function which is in the helper function to undistort the image. Here is an example image after undistorting it
-![undistorted_roadImg.jpg](attachment:undistorted_roadImg.jpg)
+![alt text](Write_up files/undistorted_roadImg.jpg)
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 I used a combination of color and gradient thresholds to generate a binary image. I used HLS color space to get the color and gradient images and i combined them later to get the final binary image. for the color image, i converted the image to HLS and extracted the `s` layer and applied a threshold to it. for the gradient image,  converted the image to HLS and extracted the `l` layer and then, i used sobelx on that image and used a threshold to get only the lanes. This step can be found in the `findLanes` function
 
 Here's an image with the final result
-![binary_roadImg.jpg](attachment:binary_roadImg.jpg)
+![alt text](Write_up files/binary_roadImg.jp)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -55,7 +55,7 @@ The code for my perspective transform exists in the `findLanes` function -line 3
 
 Here is a sample of a warped image for the same image from above
 
-![warped_roadImg.jpg](attachment:warped_roadImg.jpg)
+![alt text](Write_up files/warped_roadImg.jpg)
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
@@ -72,7 +72,7 @@ For videos:
 **note**: regarding the frames in which the left and right lane weren't similar, i neglected the measurements and used the previous `best_fit` on that frame
 
 
-![LanesInWarped_roadImg.jpg](attachment:LanesInWarped_roadImg.jpg)
+![alt text](Write_up files/LanesInWarped_roadImg.jpg)
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
@@ -88,7 +88,7 @@ I implemented this step in lines 100 to the end of the `findLanes` function.
 
 Here is an image of the result.
 
-![result_roadImg.jpg](attachment:result_roadImg.jpg)
+![alt text](Write_up files/result_roadImg.jpg)
 
 ---
 
